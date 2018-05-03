@@ -1,0 +1,229 @@
+body {
+    padding: 0;
+    margin: 0;
+    .container-fluid {
+        padding: 0;
+        margin: 0;
+        user-select: none;
+    }
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    >p {
+        margin: 10px;
+        font-size: 2rem;
+        font-weight: 900; 
+        span {
+            color: dodgerblue;
+            font-size: 2.2rem;
+        }
+    }
+    .navItems {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;  
+        .navItem {
+            flex-basis: 48%;
+            text-align: center;
+            margin: 2px;
+            padding: 5px;
+            cursor: pointer;
+            background-color: dodgerblue;
+            border: 1px solid dodgerblue;
+            color: white;
+            border-radius: 6px;
+            transition: background-color .2s, color .2s;
+            &:hover {
+                background-color: white;
+                color: dodgerblue;
+            }
+        } 
+    }
+}
+.carTitle {
+    background-color: gray;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    .carTitle--caption {
+        font-size: 2rem;
+        font-weight: 800;
+    }
+}
+
+
+@media (min-width: 850px) {
+    nav {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        >p {
+            margin: auto 0px;
+            font-size: 3rem;
+            font-weight: 900; 
+            height: 100%;
+            
+            span {
+                font-size: 3.4rem;
+            }
+        }
+
+        .navItems {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            width: 70%;
+            .navItem {
+                flex-grow: 1;
+                margin: 0 5px;
+                padding: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+    .carTitle {
+        border-radius: 0;
+        .carTitle--caption {
+            font-size: 3rem;
+            font-weight: 900;
+            width: 80%;
+        }
+    }
+    .carInfo {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px 0;
+        .carInfoDetails {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            width: 50%;
+            margin-right: 20px;
+            .carInfoDetailsHeader {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                p, h2 {
+                    margin: 0;
+                }
+            }
+            .rating {
+                display: flex;
+                justify-content: flex-end;
+                align-items: baseline;
+                cursor: pointer;
+                i {
+                    color: gray;
+                    &:hover {
+                        color: goldenrod;
+                    }
+                }
+                p {
+                    margin-right: 5px;
+                    text-decoration: underline;
+                    &:hover {
+                        color: dodgerblue;
+                    }
+                }
+            }
+            .specsAndSpecials {
+                display: flex;
+                justify-content: space-between;
+                .techSpecs {
+                    width: 60%;
+                    &>div {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: baseline;
+                    }
+                    h3 {
+                        font-size: 1.1rem;
+                    }
+                    p {
+                        text-align: right;
+                    }
+                }
+                .specials {
+                    width: 34%;
+                    text-align: center;
+                    padding: 30px 20px;
+                    border: 2px solid lightgray;
+                    border-radius: 8px;
+                   i {
+                       margin: 10px 0;
+                       font-size: 4rem;
+                       color: gray;
+                   }
+                }
+            }
+            .contactBtn {
+                width: 100%;
+                margin: 10px 0;
+                background-color: dodgerblue;
+                border: 1px solid dodgerblue;
+                height: 60px;
+                font-size: 2.1rem;
+                font-weight: 900;
+                color: white;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 3px 3px 8px 0 gray;
+                cursor: pointer;
+                transition: all .2s;
+                user-select: none;
+                &:hover {
+                    background-color: white;
+                    color: dodgerblue;
+                }
+                &:active {
+                    box-shadow: 1px 1px 8px 0 gray;
+                    transform: translate(2px,2px);
+                }
+            }
+        }
+        .pictures {
+            display: flex;
+            justify-content: center;
+            height: 470px;
+            align-self: center;
+
+            .pictureFrame {
+                border: 10px solid dodgerblue;
+                display: flex;
+                flex-wrap: wrap;
+                width:640px;
+                border-radius: 10px;
+                box-shadow: 5px 5px 10px 0 gray;
+                h3 {
+                    margin: 0;
+                    border-left: 10px solid dodgerblue;
+                    line-height: 25px;
+                    padding: 5px;
+                    color: white;
+                    background-color: dodgerblue;
+                }
+                .frameFiller {
+                    height: 35px;
+                    flex-grow: 1;
+                    background-color: dodgerblue;
+                }
+                .carousel {
+                    border: 10px solid dodgerblue;
+                    width:640px;
+                    height:420px;
+                    align-items: center;
+                    overflow: hidden;
+                }
+            }   
+        }
+    }
+}
