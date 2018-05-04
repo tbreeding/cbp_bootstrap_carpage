@@ -1,0 +1,118 @@
+@media (min-width: 850px) {
+    nav {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        >p {
+            margin: auto 0px;
+            font-size: 3rem;
+            height: 100%;
+            span {
+                font-size: 3.4rem;
+            }
+        }
+
+        .navItems {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            width: 70%;
+            .navItem {
+                flex-grow: 1;
+                margin: 0 5px;
+                padding: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+    .carTitle {
+        border-radius: 0;
+        .carTitle--caption {
+            font-size: 3rem;
+            font-weight: 900;
+            width: 80%;
+        }
+    }
+    .carInfo {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px 0;
+        .carInfoDetails {
+            order: 1;
+            flex-grow: 1;
+            width: 50%;
+            margin-right: 20px;
+            .specsAndSpecials {
+                flex-direction: row;
+                justify-content: space-between;
+                .techSpecs {
+                    order: 1;
+                    width: 60%;
+                }
+                .specials {
+                    order: 2;
+                    display: initial;
+                    width: 34%;
+                    text-align: center;
+                    padding: 30px 20px;
+                    border: 2px solid lightgray;
+                    border-radius: 8px;
+                    i {
+                        margin: 10px 0;
+                        font-size: 4rem;
+                        color: gray;
+                    }
+                }
+            }
+            .contactBtn {
+                width: 100%;
+                margin: 10px 0;
+                background-color: dodgerblue;
+                border: 1px solid dodgerblue;
+                height: 60px;
+                font-size: 1.8rem;
+            }
+        }
+        .pictures {
+            order: 2;
+            display: flex;
+            justify-content: center;
+            height: 470px;
+            align-self: center;
+
+            .pictureFrame {
+                border: 10px solid dodgerblue;
+                display: flex;
+                flex-wrap: wrap;
+                width:640px;
+                border-radius: 10px;
+                box-shadow: 5px 5px 10px 0 gray;
+                overflow: initial;
+                h3 {
+                    margin: 0;
+                    border-left: 10px solid dodgerblue;
+                    line-height: 25px;
+                    padding: 5px;
+                    color: white;
+                    background-color: dodgerblue;
+                }
+                .frameFiller {
+                    height: 35px;
+                    flex-grow: 1;
+                    background-color: dodgerblue;
+                }
+                .carousel {
+                    border: 10px solid dodgerblue;
+                    width:640px;
+                    height:420px;
+                    align-items: center;
+                    overflow: hidden;
+                }
+            }   
+        }
+    }
+}
